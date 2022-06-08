@@ -10,13 +10,14 @@ public class EnderecadorComBorda extends EnderecadorDecorator {
 	public String preparandereco(Endereco ender) {
 		String descEnder = this.ender.preparandereco(ender);
 		
-		descEnder.lines()
-			.map(l -> {
-				
-				return "|" + l;
-				
-			});
-		
+		// Somente JAVA 11
+//		descEnder.lines()
+//			.map(l -> {
+//				
+//				return "|" + l;
+//				
+//			});
+//		
 		return descEnder;
 	}
 
